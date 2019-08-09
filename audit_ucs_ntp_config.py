@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 
 from ucsmsdk.ucshandle import UcsHandle
-from ucsmsdk.mometa.aaa.AaaUserEp import AaaUserEp
 import getpass
 from tabulate import tabulate
 from datetime import datetime
-from IPython.display import clear_output
 import os
 import ipaddress
 import platform
@@ -68,7 +66,6 @@ def get_ucs_ntp_settings(ucs_list, ucs_username, user_passwd):
         print("=> logged out of {}".format(handle.ip))
         handle.logout()
 
-    clear_output()
     if platform.system() != ('Windows'):
         os.system('clear')
     else:
